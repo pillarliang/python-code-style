@@ -1,0 +1,23 @@
+{
+  "name": "python-code-style",
+  "description": "Enforce professional Python style guidelines for all Python code generation. Includes comprehensive naming conventions, docstring formats (Args/Returns/Raises), import rules, formatting standards, and industry best practices.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pillar Liang",
+    "email": "pillarliang21@gmail.com"
+  },
+  "homepage": "https://google.github.io/styleguide/pyguide.html",
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "style-guide",
+    "code-quality",
+    "linting",
+    "formatting",
+    "docstrings",
+    "naming-conventions",
+    "best-practices",
+    "pep8"
+  ],
+  "skills": ["./skills/"]
+}
