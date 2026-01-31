@@ -18,37 +18,46 @@ A Claude Code plugin that enforces professional Python style guidelines for all 
 
 ## Installation
 
-### Method 1: Using `/plugin` Command
+### Method 1: Via Marketplace (Recommended)
+
+In Claude Code, run:
 
 ```bash
-# In Claude Code, run:
+# Step 1: Add the marketplace
+/plugin marketplace add pillarliang/python-code-style
+
+# Step 2: Install the plugin
 /plugin install python-code-style
 ```
 
-### Method 2: Manual Installation
-
-1. Clone or download this repository
-2. Copy the `python-code-style` folder to `~/.claude/plugins/`
-
-```bash
-# Clone the repository
-git clone https://github.com/your-repo/python-code-style.git
-
-# Copy to Claude plugins directory
-cp -r python-code-style ~/.claude/plugins/python-code-style
-```
-
-### Method 3: Configuration in Settings
+### Method 2: Via settings.json
 
 Add to your `~/.claude/settings.json`:
 
 ```json
 {
   "plugins": [
-    "python-code-style"
+    {
+      "name": "python-code-style",
+      "source": "github:pillarliang/python-code-style"
+    }
   ]
 }
 ```
+
+### Method 3: Manual Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/pillarliang/python-code-style.git
+
+# Copy to Claude plugins directory
+cp -r python-code-style ~/.claude/plugins/python-code-style
+```
+
+### Verify Installation
+
+Run `/plugin` or `/plugin list` in Claude Code to confirm the plugin is installed.
 
 ## Usage
 
@@ -180,7 +189,7 @@ You can customize the plugin by editing files in the `skills/python-code-style/`
 
 ```bash
 # Fork and clone
-git clone https://github.com/your-username/python-code-style.git
+git clone https://github.com/pillarliang/python-code-style.git
 
 # Make your changes
 cd python-code-style

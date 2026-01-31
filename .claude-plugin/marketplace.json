@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "python-code-style",
+  "version": "1.0.0",
+  "description": "A collection of Python code style plugins for Claude Code",
+  "owner": {
+    "name": "Pillar Liang",
+    "email": "pillarliang21@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "python-code-style",
+      "description": "Enforce professional Python style guidelines for all Python code generation. Includes comprehensive naming conventions, docstring formats (Args/Returns/Raises), import rules, formatting standards, and industry best practices.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Pillar Liang",
+        "email": "pillarliang21@gmail.com"
+      },
+      "source": ".",
+      "category": "development",
+      "tags": ["python", "style-guide", "code-quality", "linting", "formatting"]
+    }
+  ]
+}
