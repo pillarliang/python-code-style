@@ -36,12 +36,17 @@ Add to your `~/.claude/settings.json`:
 
 ```json
 {
-  "plugins": [
-    {
-      "name": "python-code-style",
-      "source": "github:pillarliang/python-code-style"
+  "extraKnownMarketplaces": {
+    "python-code-style": {
+      "source": {
+        "source": "github",
+        "repo": "pillarliang/python-code-style"
+      }
     }
-  ]
+  },
+  "enabledPlugins": {
+    "python-code-style@python-code-style": true
+  }
 }
 ```
 
