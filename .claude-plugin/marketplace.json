@@ -16,7 +16,7 @@
         "name": "Pillar Liang",
         "email": "pillarliang21@gmail.com"
       },
-      "source": ".",
+      "source": "./",
       "category": "development",
       "tags": ["python", "style-guide", "code-quality", "linting", "formatting"]
     }
