@@ -1,8 +1,6 @@
 ---
 name: python-code-style
-description: |
-  Enforce professional Python style guidelines for all Python code generation. This skill ensures Claude follows industry-standard Python coding conventions including naming conventions, docstrings, imports, formatting, and best practices.
-  MANDATORY TRIGGERS: Python code generation, Python script, .py file, Python function, Python class, refactor Python, write Python
+description: "Professional Python code style enforcement for generation and review. When Claude needs to work with Python code for: (1) Generating Python code, scripts, functions, or classes, (2) Reviewing or auditing existing Python code, (3) Refactoring Python code, (4) Creating .py files, or any Python coding tasks. "
 ---
 
 # Python Code Style Guide
@@ -95,3 +93,66 @@ When generating Python code, ensure:
 8. No mutable default arguments (use `None` instead)
 9. Use `is` / `is not` for `None` comparisons
 10. Prefer list/dict/set comprehensions over `map()`/`filter()`
+
+## Code Review Checklist
+
+When reviewing Python code, check for these issues and provide specific feedback:
+
+### Naming Issues
+- [ ] Variables/functions not using `snake_case`
+- [ ] Classes not using `CapWords`
+- [ ] Constants not using `CAPS_WITH_UNDER`
+- [ ] Internal items missing `_leading_underscore`
+- [ ] Unclear or non-descriptive names
+
+### Documentation Issues
+- [ ] Missing or incomplete docstrings
+- [ ] Docstrings lacking Args/Returns/Raises sections
+- [ ] Outdated docstrings not matching actual behavior
+- [ ] Missing module-level docstring
+
+### Style Issues
+- [ ] Lines exceeding 80 characters
+- [ ] Incorrect indentation (not 4 spaces)
+- [ ] Wrong import ordering (should be: stdlib → third-party → local)
+- [ ] Missing blank lines between top-level definitions
+- [ ] Using tabs instead of spaces
+
+### Code Quality Issues
+- [ ] Mutable default arguments (e.g., `def func(items=[])`)
+- [ ] Using `==` or `!=` for `None` comparisons
+- [ ] Using `map()`/`filter()` instead of comprehensions
+- [ ] Missing type hints on public functions
+- [ ] Bare `except:` clauses without specific exception types
+- [ ] Overly broad exception handling
+
+### Review Output Format
+
+When reviewing code, provide feedback in this format:
+
+```
+## Code Review Summary
+
+### ✅ What's Good
+- [List positive aspects]
+
+### ⚠️ Issues Found
+
+#### Issue 1: [Category] - [Brief Description]
+- **Location**: Line X
+- **Problem**: [Description]
+- **Suggestion**: [How to fix]
+- **Example**:
+  ```python
+  # Before
+  [problematic code]
+
+  # After
+  [corrected code]
+  ```
+
+### 📊 Overall Assessment
+- Style Compliance: X/10
+- Documentation: X/10
+- Code Quality: X/10
+```

@@ -1,5 +1,7 @@
 # Python Code Style Plugin
 
+**Language / 语言**: [English](README.md) | [中文简体](docs/README.zh-cn.md) | [繁體中文](docs/README.zh-tw.md) | [Deutsch](docs/README.de.md) | [Français](docs/README.fr.md) | [Italiano](docs/README.it.md) | [日本語](docs/README.ja.md) | [한국어](docs/README.ko.md) | [Português](docs/README.pt.md) | [Español](docs/README.es.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-blue.svg)](https://code.claude.com/docs/en/plugins)
 
@@ -7,7 +9,8 @@ A Claude Code plugin that enforces professional Python style guidelines for all 
 
 ## Features
 
-- **Automatic Activation**: Claude automatically follows Python style guidelines when generating code
+- **Automatic Activation**: Claude automatically follows Python style guidelines when generating or reviewing code
+- **Code Review Support**: Review existing Python code with detailed feedback and scoring
 - **Comprehensive Coverage**: Includes industry-standard best practices
   - Naming conventions (modules, classes, functions, variables, constants)
   - Docstring format with Args, Returns, Raises, Yields sections
@@ -72,15 +75,24 @@ Once installed, the plugin activates automatically whenever you ask Claude to:
 - Create Python scripts or modules
 - Refactor Python code
 - Generate Python functions or classes
+- **Review existing Python code**
 
 ### Example Prompts
 
+**Code Generation:**
 ```
 "Write a Python function to parse JSON files"
 
 "Create a Python class for database connections"
 
 "Refactor this Python code to be cleaner"
+```
+
+**Code Review:**
+```
+"Review this Python file: /path/to/file.py"
+
+"Check this Python code for style issues"
 ```
 
 Claude will automatically apply Python style guide rules, including:
@@ -143,6 +155,35 @@ def hash_password(password: str, salt: str | None = None) -> tuple[str, str]:
     return password_hash, salt
 ```
 
+### Code Review Example Output
+
+When reviewing code, Claude provides structured feedback:
+
+```markdown
+## Code Review Summary
+
+### ✅ What's Good
+- Clear function naming using snake_case
+- Good use of type hints
+
+### ⚠️ Issues Found
+
+#### Issue 1: Documentation - Missing docstring
+- **Location**: Line 5
+- **Problem**: Function `process_data` lacks a docstring
+- **Suggestion**: Add docstring with Args/Returns/Raises sections
+
+#### Issue 2: Style - Mutable default argument
+- **Location**: Line 10
+- **Problem**: `def func(items=[])` uses mutable default
+- **Suggestion**: Use `items=None` and initialize inside function
+
+### 📊 Overall Assessment
+- Style Compliance: 7/10
+- Documentation: 5/10
+- Code Quality: 8/10
+```
+
 ## Plugin Structure
 
 ```
@@ -170,6 +211,8 @@ Quick reference including:
 - Docstring format template
 - Import order
 - Code generation checklist
+- **Code review checklist** (naming, documentation, style, code quality)
+- **Standardized review output format**
 
 ### Reference Files
 
