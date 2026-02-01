@@ -67,6 +67,28 @@ cp -r python-code-style ~/.claude/plugins/python-code-style
 
 在 Claude Code 中執行 `/plugin` 或 `/plugin list` 確認外掛已安裝。
 
+### 更新外掛
+
+**手動更新：**
+
+1. 更新 marketplace 的外掛列表，然後重新安裝：
+   ```bash
+   /plugin marketplace update pillarliang/python-code-style
+   ```
+
+2. 或透過互動式介面：執行 `/plugin`，切換到 **Marketplaces** 標籤頁，選擇對應的 marketplace，然後選擇 **Update**。
+
+**自動更新（Auto-update）：**
+
+Claude Code 支援在啟動時自動更新 marketplace 及其已安裝的外掛：
+
+1. 執行 `/plugin` 開啟外掛管理器
+2. 選擇 **Marketplaces** 標籤頁
+3. 選中目標 marketplace
+4. 選擇 **Enable auto-update**
+
+> **注意：** 官方 Anthropic marketplace 預設已啟用自動更新，第三方和本地開發的 marketplace 預設是關閉的。
+
 ## 使用方法
 
 安裝後，當您要求 Claude 執行以下操作時，外掛會自動啟用：

@@ -67,6 +67,28 @@ cp -r python-code-style ~/.claude/plugins/python-code-style
 
 Run `/plugin` or `/plugin list` in Claude Code to confirm the plugin is installed.
 
+### Update Plugin
+
+**Manual Update:**
+
+1. Update the marketplace plugin list, then reinstall:
+   ```bash
+   /plugin marketplace update pillarliang/python-code-style
+   ```
+
+2. Or via interactive UI: Run `/plugin`, switch to the **Marketplaces** tab, select the marketplace, then choose **Update**.
+
+**Auto-update:**
+
+Claude Code supports automatic updates for marketplaces and installed plugins on startup:
+
+1. Run `/plugin` to open the plugin manager
+2. Select the **Marketplaces** tab
+3. Select the target marketplace
+4. Choose **Enable auto-update**
+
+> **Note:** The official Anthropic marketplace has auto-update enabled by default. Third-party and locally developed marketplaces have it disabled by default.
+
 ## Usage
 
 Once installed, the plugin activates automatically whenever you ask Claude to:
@@ -277,6 +299,14 @@ Contributions are welcome! Please:
 5. Open a Pull Request
 
 ## Changelog
+
+### v1.1.0
+
+- Added code review support with detailed feedback and scoring
+- Added code review checklist (naming, documentation, style, code quality)
+- Added standardized review output format
+- Added multi-language README support (10 languages)
+- Improved skill trigger conditions for better automatic activation
 
 ### v1.0.0
 

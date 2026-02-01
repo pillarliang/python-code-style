@@ -1,7 +1,7 @@
 {
   "name": "python-code-style",
-  "description": "Enforce professional Python style guidelines for all Python code generation. Includes comprehensive naming conventions, docstring formats (Args/Returns/Raises), import rules, formatting standards, and industry best practices.",
-  "version": "1.0.0",
+  "description": "Enforce professional Python style guidelines for code generation and review. Includes naming conventions, docstring formats (Args/Returns/Raises), import rules, formatting standards, code review checklist, and industry best practices.",
+  "version": "1.0.1",
   "author": {
     "name": "Pillar Liang",
     "email": "pillarliang21@gmail.com"

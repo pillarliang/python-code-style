@@ -67,6 +67,28 @@ cp -r python-code-style ~/.claude/plugins/python-code-style
 
 Claude Code에서 `/plugin` 또는 `/plugin list`를 실행하여 설치를 확인하세요.
 
+### 플러그인 업데이트
+
+**수동 업데이트:**
+
+1. marketplace 플러그인 목록을 업데이트한 후 재설치:
+   ```bash
+   /plugin marketplace update pillarliang/python-code-style
+   ```
+
+2. 또는 대화형 UI를 통해: `/plugin`을 실행하고 **Marketplaces** 탭으로 전환한 다음 marketplace를 선택하고 **Update**를 선택합니다.
+
+**자동 업데이트:**
+
+Claude Code는 시작 시 marketplace 및 설치된 플러그인의 자동 업데이트를 지원합니다:
+
+1. `/plugin`을 실행하여 플러그인 관리자 열기
+2. **Marketplaces** 탭 선택
+3. 대상 marketplace 선택
+4. **Enable auto-update** 선택
+
+> **참고:** 공식 Anthropic marketplace는 기본적으로 자동 업데이트가 활성화되어 있습니다. 타사 및 로컬 개발 marketplace는 기본적으로 비활성화되어 있습니다.
+
 ## 사용법
 
 설치 후, Claude에게 다음을 요청하면 플러그인이 자동으로 활성화됩니다:

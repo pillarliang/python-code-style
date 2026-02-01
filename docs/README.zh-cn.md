@@ -67,6 +67,28 @@ cp -r python-code-style ~/.claude/plugins/python-code-style
 
 在 Claude Code 中运行 `/plugin` 或 `/plugin list` 确认插件已安装。
 
+### 更新插件
+
+**手动更新：**
+
+1. 更新 marketplace 的插件列表，然后重新安装：
+   ```bash
+   /plugin marketplace update pillarliang/python-code-style
+   ```
+
+2. 或通过交互式界面：运行 `/plugin`，切换到 **Marketplaces** 标签页，选择对应的 marketplace，然后选择 **Update**。
+
+**自动更新（Auto-update）：**
+
+Claude Code 支持在启动时自动更新 marketplace 及其已安装的插件：
+
+1. 运行 `/plugin` 打开插件管理器
+2. 选择 **Marketplaces** 标签页
+3. 选中目标 marketplace
+4. 选择 **Enable auto-update**
+
+> **注意：** 官方 Anthropic marketplace 默认已启用自动更新，第三方和本地开发的 marketplace 默认是关闭的。
+
 ## 使用方法
 
 安装后，当您要求 Claude 执行以下操作时，插件会自动激活：

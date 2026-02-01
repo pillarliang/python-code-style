@@ -67,6 +67,28 @@ cp -r python-code-style ~/.claude/plugins/python-code-style
 
 Execute `/plugin` ou `/plugin list` no Claude Code para confirmar a instalação.
 
+### Atualizar Plugin
+
+**Atualização manual:**
+
+1. Atualize a lista de plugins do marketplace e reinstale:
+   ```bash
+   /plugin marketplace update pillarliang/python-code-style
+   ```
+
+2. Ou via interface interativa: Execute `/plugin`, mude para a aba **Marketplaces**, selecione o marketplace e escolha **Update**.
+
+**Atualização automática:**
+
+Claude Code suporta atualizações automáticas para marketplaces e plugins instalados na inicialização:
+
+1. Execute `/plugin` para abrir o gerenciador de plugins
+2. Selecione a aba **Marketplaces**
+3. Selecione o marketplace de destino
+4. Escolha **Enable auto-update**
+
+> **Nota:** O marketplace oficial da Anthropic tem atualizações automáticas habilitadas por padrão. Marketplaces de terceiros e desenvolvidos localmente têm desabilitado por padrão.
+
 ## Uso
 
 Uma vez instalado, o plugin ativa automaticamente quando você pede ao Claude para:
